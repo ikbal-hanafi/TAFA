@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-from fbparser import Account
-from fbparser import function
-from fbparser import sorting
-from getpass import getpass
-import os, time, random, fbparser, sys
-=======
 from murtanto import Account
 from murtanto import function
 from murtanto import sorting
 from getpass import getpass
 import os, time, random, murtanto, sys
->>>>>>> cc763dd... bug fixed
 
 ses = None
 count = 0
@@ -42,14 +34,10 @@ def banner(author = False):
 {p}  |____|\____|__  /{c}\___  /{p}\____|__  /
 {c}        {w}   {c}     {p}\/ {c}    \/ {p}        \/""")
 	if author:
-<<<<<<< HEAD
-		print(w + "   by: SalisM3 ft Njank")
-=======
 		print(w + f"   by: {getMyName()} ft Njank")
 		
 def getMyName():
   return random.choice(["SalisM3", "RomaKelapa"])
->>>>>>> cc763dd... bug fixed
 
 def input2(teks):
 	kata = input(teks + p)
@@ -167,11 +155,7 @@ def menu2():
 		banner()
 		print(f"   {p}1). {w}Spam Like in Home")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.like_post_home, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.like_post_home, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.open_url(ses, url)
 			hitung_proses(len(data))
@@ -182,11 +166,7 @@ def menu2():
 		print(f"   {p}2). {w}Spam Like in Friend Timeline")
 		id_ = input2(f"   {panah}Id Friend: ")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.like_post_friend, args = (ses,), kwargs = {"id":id_}, limit = limit)
-=======
 		data = dump(murtanto.like_post_friend, args = (ses,), kwargs = {"id":id_}, limit = limit)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.open_url(ses, url)
 			hitung_proses(len(data))
@@ -197,11 +177,7 @@ def menu2():
 		print(f"   {p}3). {w}Spam Like in Group")
 		id_ = input2(f"   {panah}Id Group: ")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.like_post_grup, args = (ses,), kwargs = {"id":id_}, limit = limit)
-=======
 		data = dump(murtanto.like_post_grup, args = (ses,), kwargs = {"id":id_}, limit = limit)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.open_url(ses, url)
 			hitung_proses(len(data))
@@ -212,11 +188,7 @@ def menu2():
 		print(f"   {p}4). {w}Spam Like in Fanspage")
 		id_ = input2(f"   {panah}Username Fanspage: ")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.like_post_fanspage, args = (ses,), kwargs = {"username":id_}, limit = limit)
-=======
 		data = dump(murtanto.like_post_fanspage, args = (ses,), kwargs = {"username":id_}, limit = limit)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.open_url(ses, url)
 			hitung_proses(len(data))
@@ -247,11 +219,7 @@ def menu3():
 		banner()
 		print(f"   {p}1).{w} Spam React in Home: {type.capitalize()}")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.react_post_home, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.react_post_home, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.react(ses, url, type = type)
 			hitung_proses(len(data))
@@ -262,11 +230,7 @@ def menu3():
 		print(f"   {p}2).{w} Spam React in Friend Timeline: {type.capitalize()}")
 		id_ = input2(f"   {panah}Id Friend: ")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.react_post_friend, args = (ses,), kwargs = {"id":id_}, limit = limit)
-=======
 		data = dump(murtanto.react_post_friend, args = (ses,), kwargs = {"id":id_}, limit = limit)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.react(ses, url, type = type)
 			hitung_proses(len(data))
@@ -277,11 +241,7 @@ def menu3():
 		print(f"   {p}3).{w} Spam React in Friend Group: {type.capitalize()}")
 		id_ = input2(f"   {panah}Id Group: ")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.react_post_grup, args = (ses,), kwargs = {"id":id_}, limit = limit)
-=======
 		data = dump(murtanto.react_post_grup, args = (ses,), kwargs = {"id":id_}, limit = limit)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.react(ses, url, type = type)
 			hitung_proses(len(data))
@@ -292,11 +252,7 @@ def menu3():
 		print(f"   {p}4).{w} Spam React in Fanspage: {type.capitalize()}")
 		id_ = input2(f"   {panah}Username Fanspage: ")
 		limit = select(1,500, msg_error = f"   {C}> {w}min: 1, max: 500", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.react_post_fanspage, args = (ses,), kwargs = {"username":id_}, limit = limit)
-=======
 		data = dump(murtanto.react_post_fanspage, args = (ses,), kwargs = {"username":id_}, limit = limit)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.react(ses, url, type = type)
 			hitung_proses(len(data))
@@ -318,11 +274,7 @@ def menu4():
 		print(f"   {p}1).{w} Spam Comment in Home")
 		msg = input2(f"   {panah}Comment value: ")
 		limit = select(1,100, msg_error = f"   {C}> {w}min: 1, max: 100", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.comment_post_home, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.comment_post_home, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.comment(ses, url, msg)
 			hitung_proses(len(data))
@@ -340,11 +292,7 @@ def menu4():
 		id_ = input2(f"   {panah}" + ("Id" if pilih != 4 else "Username") + " Target: ")
 		msg = input2(f"   {panah}Comment value: ")
 		limit = select(1,100, msg_error = f"   {C}> {w}min: 1, max: 100", teks = f"    {C}> {w}Limit:")
-<<<<<<< HEAD
-		data = dump(fbparser.comment_post_friend if pilih == 2 else fbparser.comment_post_grup if pilih == 3 else fbparser.comment_post_fanspage, args = (ses,), kwargs = {"id" if pilih != 4 else "username":id_}, limit = limit)
-=======
 		data = dump(murtanto.comment_post_friend if pilih == 2 else murtanto.comment_post_grup if pilih == 3 else murtanto.comment_post_fanspage, args = (ses,), kwargs = {"id" if pilih != 4 else "username":id_}, limit = limit)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.comment(ses, url, msg)
 			hitung_proses(len(data))
@@ -366,15 +314,9 @@ def menu5():
 		print(f"   {p}1).{w} Mass Accept Request" if pilih == 1 else f"   {p}2).{w} Mass Reject Friend")
 		limit = select(1,9999999, teks = f"    {C}> {w}Limit:")
 		confirm_execute()
-<<<<<<< HEAD
-		data = dump(fbparser.friend_request, args = (ses,), limit = limit, show_target = False)
-		for url in data:
-			url = url["confirm"] if pilih == 1 else url["reject"]
-=======
 		data = dump(murtanto.friend_request, args = (ses,), limit = limit, show_target = False)
 		for url in data:
 			url = url[0] if pilih == 1 else url[1]
->>>>>>> cc763dd... bug fixed
 			function.open_url(ses, url)
 			hitung_proses(len(data))
 		print(f"\n   {p}[+]{w} Done !!!")
@@ -385,11 +327,7 @@ def menu5():
 		print(f"   {p}3).{w} Mass Unadd (not Unfriend)")
 		limit = select(1,9999999, teks = f"    {C}> {w}Limit:")
 		confirm_execute()
-<<<<<<< HEAD
-		data = dump(fbparser.friend_requested, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.friend_requested, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.open_url(ses, url)
 			hitung_proses(len(data))
@@ -401,11 +339,7 @@ def menu5():
 		print(f"   {p}4).{w} Mass Unfriend")
 		limit = select(1,350, msg_error = f"   {C}> {w}min: 1, max: 350", teks = f"    {C}> {w}Limit:")
 		confirm_execute()
-<<<<<<< HEAD
-		data = dump(fbparser.myFriend, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.myFriend, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for name, username, img in data:
 			function.unfriend(ses, username)
 			hitung_proses(len(data))
@@ -428,11 +362,7 @@ def menu6():
 		msg = input2(f"   {panah}Message: ")
 		limit = select(1,100, msg_error = f"   {C}> {w}min: 1, max: 100", teks = f"    {C}> {w}Limit:")
 		confirm_execute()
-<<<<<<< HEAD
-		data = dump(fbparser.myFriend, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.myFriend, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for name, username, img in data:
 			function.send_msg(ses, username, msg)
 			hitung_proses(len(data))
@@ -444,11 +374,7 @@ def menu6():
 		msg = input2(f"   {panah}Message: ")
 		limit = select(1,100, msg_error = f"   {C}> {w}min: 1, max: 100", teks = f"    {C}> {w}Limit:")
 		confirm_execute()
-<<<<<<< HEAD
-		data = dump(fbparser.onlineFriend, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.onlineFriend, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for name, username in data:
 			function.send_msg(ses, username, msg)
 			hitung_proses(len(data))
@@ -460,11 +386,7 @@ def menu6():
 		# msg = input2(f"   {panah}Message: ")
 		limit = select(1,400, msg_error = f"   {C}> {w}min: 1, max: 400", teks = f"    {C}> {w}Limit:")
 		confirm_execute()
-<<<<<<< HEAD
-		data = dump(fbparser.msgUrl, args = (ses,), limit = limit, show_target = False)
-=======
 		data = dump(murtanto.msgUrl, args = (ses,), limit = limit, show_target = False)
->>>>>>> cc763dd... bug fixed
 		for url in data:
 			function.deleteMsg(ses, url)
 			hitung_proses(len(data))
@@ -485,11 +407,7 @@ def menu7():
 		print(f"   {p}1).{w} Find Id Friend")
 		name = input2(f" {w}  {panah}Full Name: ")
 		print(w)
-<<<<<<< HEAD
-		data = fbparser.find_id_friend(ses, name)
-=======
 		data = murtanto.find_id_friend(ses, name)
->>>>>>> cc763dd... bug fixed
 		if None in data:
 			print(f"   {p}[+]{w} Not Found !!!")
 		else:
@@ -501,11 +419,7 @@ def menu7():
 		print(f"   {p}1).{w} Find Id Friend")
 		name = input2(f" {w}  {panah}Group Name: ")
 		print(w)
-<<<<<<< HEAD
-		data = fbparser.find_id_group(ses, name)
-=======
 		data = murtanto.find_id_group(ses, name)
->>>>>>> cc763dd... bug fixed
 		if None in data:
 			print(f"   {p}[+]{w} Not Found !!!")
 		else:
@@ -546,13 +460,8 @@ def dump(func, args = [], kwargs = {}, limit = 100, show_target = True):
 	return rv
 
 def comment_toAuthor():
-<<<<<<< HEAD
-	kata = random.choice(["gw support lu bro", "Hello I'M TAFA User", "gw user tafa bro, buset toolnya mantap bener", "Halo bro gw user Tafa"])
-	kata2 = "gw support lu bro"
-=======
 	kata = random.choice(["gw support lu bro", "Hello I'M TAFA User", "gw user tafa bro, buset toolnya mantap bener", "Halo bro gw user Tafa", "be yourself and never surrender"])
 	kata2 = random.choice(["gw support lu bro", "be yourself and never surrender"])
->>>>>>> cc763dd... bug fixed
 	try:
 		function.comment(ses, "https://mbasic.facebook.com/photo.php?fbid=166694224710808&id=100041106940465", kata)
 		function.comment(ses, "https://mbasic.facebook.com/photo.php?fbid=150664556427292&id=10004451246330", kata2)
@@ -612,12 +521,6 @@ try:
 	home()
 except KeyboardInterrupt:
 	exit(f"   {p}[!]{w} Oke Sob !!!")
-<<<<<<< HEAD
-except Exception as e:
-	print("   [err] " + str(e))
-	enter()
-=======
 #except Exception as e:
 #	print("   [err] " + str(e))
 #	enter()
->>>>>>> cc763dd... bug fixed
